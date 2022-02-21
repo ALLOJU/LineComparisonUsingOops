@@ -26,15 +26,30 @@ public class LineComparisonProblem {
          return result;
          
  }
+	 private static void getLinesLengthEquals(String val1, String val2) {
+		 if(val1.equals(val2)){
+       	  System.out.println("Both lines are equal");
+         }
+         else {
+       	  System.out.println("Both lines are not equal");
+         }
+			
+		}
 	  public static void main(String[] args) {
           Scanner scanner = new Scanner(System.in);
           
           System.out.println("Please enter values for line 1");
           int lenthOfline_1 = getLengthOfLine(scanner);
          
-			System.out.println("Length of line is "+lenthOfline_1);
-          
+			System.out.println("Length of line 1 is "+lenthOfline_1);
+			 int lenthOfline_2 = getLengthOfLine(scanner);
+				System.out.println("Length of line 2 is "+lenthOfline_2);
+	          
+	          String val1=String.valueOf(lenthOfline_1);
+	          String val2=String.valueOf(lenthOfline_2);
+	          getLinesLengthEquals(val1,val2);
           scanner.close();
   }
+	
 
 }
